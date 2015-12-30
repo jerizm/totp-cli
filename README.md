@@ -36,6 +36,7 @@ Installation
 ------------
 
     $ sudo make install
+    $ sudo gem install rotp
 
 License
 -------
