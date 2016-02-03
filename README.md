@@ -44,8 +44,14 @@ Requirements
 Installation
 ------------
 
+Installation is quite simple:
+
     $ sudo make install
     $ sudo gem install rotp
+
+There is also an [AUR package][aur-package] available for ArchLinux users.
+
+[aur-package]: https://aur.archlinux.org/packages/totp-cli/
 
 License
 -------
