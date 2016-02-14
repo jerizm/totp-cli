@@ -6,7 +6,7 @@ require 'rotp'
 require 'open3'
 
 if ARGV.size != 1
-  puts "Usage: otp SERVICE"
+  warn "Usage: #{File.basename(__FILE__)} SERVICE"
   exit 1
 end
 
