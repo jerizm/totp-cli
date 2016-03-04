@@ -11,27 +11,29 @@ totp-cli fetches your shared key (aka: code) from [pass][pass], generates the
 token, outputs it to stdout and copies it to your PRIMARY X selection.
 
 Shared keys should be stored in your pass storage under `2fa/SERVICE/code`,
-for example `2fa/github/code`.
+for example `2fa/github/code`. The add command can be used to add this less
+painfully
 
 [pass]: http://www.passwordstore.org/
 
 Usage
 -----
 
-    totp SERVICE
+    totp generate SERVICE
+    totp add SERVICE CODE
 
 For example:
 
-    $ totp github
+    $ totp generate github
     621787
 
 You don't need to run `totp` from the command line if you just want to paste
 the code; you can run if from `dmenu`, or whatever your application launcher
 is.
 
-To add new services, simply add their code to your pass store:
+To add new services, use the add command:
 
-    $ pass insert 2fa/some_service/code
+    $ totp add some_service ZQBpIYCzdQti
 
 Requirements
 ------------
