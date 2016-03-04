@@ -10,13 +10,13 @@ if ARGV.size != 1
   exit 1
 end
 
-cmd = "pass 2fa/" + ARGV[0] + "/code"
+cmd = "pass 2fa/#{ARGV[0]}/code"
 pass = nil
 
 Open3.popen3(cmd) do | stdin, stdout, stderr, wait |
   pass = stdout.read
   err = stderr.read
-  if not err.chomp.empty?
+  unless err.chomp.empty?
     puts err
     exit 2
   end
