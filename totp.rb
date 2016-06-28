@@ -31,7 +31,7 @@ class GenerateCmd < CmdParse::Command
     token = totp.now
     puts token
 
-    Open3.popen3 "xclip" do | stdin, stdout, stderr, wait |
+    Open3.popen3 "pbcopy" do | stdin, stdout, stderr, wait |
       stdin.puts token.chomp
       stdin.close
     end
